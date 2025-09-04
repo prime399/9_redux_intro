@@ -1,14 +1,13 @@
-import { combineReducers, legacy_createStore as createStore} from 'redux'
+import { configureStore } from '@reduxjs/toolkit';
 import accountReducer from './features/accounts/accountSlice';
 import customerReducer from './features/customer/customerSlice';
-import { thunk } from 'redux-thunk';
 
-const rootReducer = combineReducers({
+const store = configureStore({
+  reducer: {
     account: accountReducer,
-    customer: customerReducer
-})
+    customer: customerReducer,
+  },
 
-const store = createStore(rootReducer);
+});
 
 export default store;
-
