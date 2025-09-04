@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* fonts  */
+
+.epunda-sans-unique {
+  font-family: "Epunda Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 40px;
+    background: #fafafa;
+    color: #111;
+}
+
+/* Base form controls */
+input,
+select,
+textarea {
+    margin: 0 8px;
+    padding: 8px 10px;
+    font: inherit;
+    border: 2px solid #222; /* darker input borders */
+    border-radius: 6px;
+    background: #fff;
+    transition: border-color 150ms ease, box-shadow 150ms ease, transform 80ms ease;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    color: #111;
+}
+
+/* Slightly larger hit area for buttons and clearer borders */
+button {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 2px solid #111; /* darker button border */
+    border-radius: 6px;
+    background: linear-gradient(180deg, #fff, #f3f3f3);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform 80ms ease, box-shadow 120ms ease, border-color 150ms ease;
+}
+
+/* Hover / active / focus states to emphasize darker borders */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0a58ca; /* prominent focus color */
+    box-shadow: 0 6px 18px rgba(10,88,202,0.12);
+    transform: translateY(-1px);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-color: #000;
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Container styling */
+.inputs {
+    background-color: #f7f7f7;
+    padding: 32px;
+    border: 3px solid #222; /* darker container border */
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+}
+
+/* Spacing for children */
+.inputs > * + * {
+    margin-top: 20px;
+}
+
+/* Balance card */
+.balance {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: #f7f7f7;
+    padding: 24px 32px;
+    font-weight: bold;
+    font-size: 32px;
+    min-width: 180px;
+    text-align: center;
+    border: 3px solid #111; /* darker border for balance */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* Inputs inside container get slightly darker borders to match */
+.inputs input,
+.inputs select,
+.inputs textarea {
+    border-color: #1a1a1a;
+}
+
+/* Small utilities */
+::placeholder {
+    color: #9aa0a6;
+    opacity: 1;
+}
