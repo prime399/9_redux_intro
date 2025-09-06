@@ -17,6 +17,7 @@ function AccountOperations() {
     if(!depositAmount) return;              
 
     dispatch(deposit(depositAmount, currency));
+    // dispatch(deposit(depositAmount));
     setDepositAmount("");
     console.log(store.getState())
   }
